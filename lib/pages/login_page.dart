@@ -1,3 +1,5 @@
+import 'package:newfile/components/textfieldforusername.dart';
+import 'package:newfile/config/appstrings.dart';
 import 'package:newfile/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -9,14 +11,14 @@ class loginpage extends StatelessWidget{
 
         body:SingleChildScrollView(
           child:SizedBox(
-            height:MediaQuery.of(context).size.height  //poori screen ki height batata hai yehn
+            height:MediaQuery.of(context).size.height  //poori screen ki height batata hai yehn used usually with spacer
             ,child:Column(
               children: [
                 SizedBox(
                   height:38,
                 ),
                 // Spacer(),
-                Text("Hey There,Welcome Back",style: TextStyle(
+                Text(AppStrings.helloWelcome,style: TextStyle(
                   fontSize: 25.2,
                   fontWeight: FontWeight.bold,
                 ),),
@@ -40,12 +42,7 @@ class loginpage extends StatelessWidget{
                       borderRadius: BorderRadius.circular(10.0)
                           ,border:Border.all()
                     ),
-                    child: TextField(
-                      decoration: InputDecoration(hintText: 'Username',
-                      border:OutlineInputBorder()
-                      )
-                          ,
-                    ),
+                    child: textfieldforusername(hint:"Username"),
                   ),
                 ),
                 SizedBox(
@@ -59,12 +56,7 @@ class loginpage extends StatelessWidget{
                         borderRadius: BorderRadius.circular(10.0)
                         ,border:Border.all()
                     ),
-                    child: TextField(
-                      decoration: InputDecoration(hintText: 'Password',
-                          border:OutlineInputBorder()
-                      )
-                      ,
-                    ),
+                    child: textfieldforusername(hint: "Password"),
                   ),
                 ),
                 Align(
@@ -114,6 +106,9 @@ class loginpage extends StatelessWidget{
         )
     ));
     throw UnimplementedError();
+    //jai shree ram
+    //har har mahadev
+
   }
 
 }

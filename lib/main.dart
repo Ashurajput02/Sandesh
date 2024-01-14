@@ -1,7 +1,12 @@
 import 'package:newfile/mainpage.dart';
+import 'package:newfile/pages/editprofilepage.dart';
 import 'package:newfile/pages/homepage.dart';
 import 'package:newfile/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:newfile/pages/profilepage.dart';
+import 'package:newfile/testpage.dart';
+
+import 'config/approutes.dart';
 
 
 
@@ -15,14 +20,11 @@ class myapp extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       theme:ThemeData(
+        brightness: Brightness.light,
         fontFamily: 'Urbanist',),
         initialRoute:'/'
-        ,routes:{
-        '/':(context) =>loginpage(),
-      '/loginpage':(context) =>loginpage(),
-      '/home':(context) =>homepage(),
-      '/mainpage':(context) =>mainpage(),
-      }
+        ,routes:AppRoutes.pages,
+
     );
   }
 

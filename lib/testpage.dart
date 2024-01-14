@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class testpage extends StatefulWidget {  @override
   State<testpage> createState() => _testpageState();
 }
-int count=0;
+
 class _testpageState extends State<testpage> {
+  int count=0;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -18,7 +19,7 @@ class _testpageState extends State<testpage> {
       fontSize: 28,
       fontWeight: FontWeight.bold,
     ),)),
-    floatingActionButton: FloatingActionButton(onPressed: () {
+    floatingActionButton: FloatingActionButton(onPressed:() {
      setState(() {
        count++;
      });
@@ -26,3 +27,5 @@ class _testpageState extends State<testpage> {
   );
     throw UnimplementedError();
   }}
+
+//this stateful widget help us
